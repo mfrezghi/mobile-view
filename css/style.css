@@ -140,7 +140,10 @@ header{
   }
 }
 
-/* make all text white */
+/* make the current page have an undeline below the navbar */
+nav a[href="<?php echo basename($_SERVER['PHP_SELF']); ?>"]{
+  border-bottom: 2px solid white;
+}
 
 
 
