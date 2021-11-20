@@ -7,6 +7,7 @@ background-color: #737373;
 font-size: 18px;
 margin: 0;
 padding: 0;
+color: white;
 }
 
 body::after{
@@ -39,6 +40,7 @@ text-align: center;
 
 p{
   text-align: center;
+  color: white;
 }
 
 img{
@@ -137,6 +139,8 @@ header{
     align-items: center;
   }
 }
+
+/* make all text white */
 
 
 
