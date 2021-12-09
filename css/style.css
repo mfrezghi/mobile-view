@@ -3,39 +3,30 @@ html{
 }
 
 body{
-background-color: #737373;
+background-color:white;
 font-size: 18px;
 margin: 0;
-padding: 0;
+padding-bottom: 50px;
 color: white;
 }
 
-body::after{
-  content: "";
-  background-color: black;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  opacity: 0.7;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: fixed;
-  z-index: -1;
+h1{
+padding: 20px;
+text-align: center;
+background-color: #89A1EF;
+color: white;
+margin-top: 20px;
+font-size: 20px;
+font-weight: lighter;
 }
 
-h1{
-font-size: 50px;
-line-height: 1;
-padding: 50px 0;
-text-align: center;
-}
 
 h2{
 font-size: 32px;
 line-height: 1.5;
 text-align: center;
+display: block;
+background-color: #89A1EF;
 }
 
 p{
@@ -44,110 +35,265 @@ p{
 }
 
 img{
+  padding: 20px;
+  border: 1px solid white;
   display: block;
-  margin: 0 auto;
+  margin: 0 auto; 
+  width: 300px;
+  animation-name: FadeIn;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
 }
 
-img:first-child{
-  padding-top: 50px;
-}
-nav li{
-display: inline;
-padding-right: 20px;
+.grid-container {
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 10px;
+  background-color: #89A1EF;
+  padding: 10px;
+  border-top: 20px solid white;
+  border-bottom: 20px solid white;
+
 }
 
-nav{
-background-color: #ddd;
-padding: 25px 0;    
-text-align: center;   
-}
-
-header p{
-color: black;
-font-size: 24px;
-padding: 0 100px;
-text-align: center;
+main{
+  background-color: white;
 }
 
 footer{
-background-color: black;
-color: white;
+background-color: white;
 padding-top: 30px;
+padding-bottom: 30px;
 text-align: center;
+margin-top: 150px;
 }
+footer p{
+  color: black;
+}
+/* NAVIGATION */
+nav{
+  background-color:white;
+  padding: 30px;    
+  text-align: center;   
+  }
 
 nav a{
 color: black;
-font-weight: bold;
 text-decoration: none;
+font-size: 20px;
+text-transform: uppercase;
 }
 
 a:hover {
 text-decoration: underline;
 }
 
-header{
+body{
 background-attachment: fixed; 
 background-position: center; 
 background-size: cover; 
 color: white;
-height: 400px; 
-
-background-image: url("../imgs/bell+tower mobile view.jpg");
-
-
+background-image: url("../imgs/champs.jpg");
+background-color: #89A1EF;
+background-blend-mode: luminosity;
 background-repeat: no-repeat;
 grid-column: 1 / -1;
 grid-row: 1 / span 1;
 }
 
 header{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  padding: 25px 0;    
+  text-align: center;   
+  height: 800px;
+  
 }
 
-.img{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+nav li{
+  padding: 10px;
+  border: 1px solid black;
+  margin-top: 20px;
 }
 
-#skip-link{
+.nav .current {
+  font-weight: bold;
+  background-position: center;
+  background-color: #89A1EF;
+}
+
+/* contact */
+input[type=text], select, textarea {
+  width: 100%; 
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px; 
+  box-sizing: border-box; 
+  margin-top: 6px; 
+  margin-bottom: 16px;
+}
+
+input[type=submit] {
+  background-color: #89A1EF;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #3385ff;
+}
+
+.contact-container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+label{
+  color: black;
+}
+/* contact */
+
+@keyframes FadeIn {
+  from {opacity:0;}
+  to {opacity:1;}
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  img {
+    -webkit-animation: initial;
+    animation: initial;
+  }
+}
+
+/* flipcard */
+.flip-card {
+  background-color: transparent;
+  width: 580px;
+  height: 1065px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner,
+.flip-card:focus-within .flip-card-inner,
+.flip-card:active .flip-card-inner,
+.flip-card:focus .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
   position: absolute;
-  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #008CCC;
+  background-color: azure;
+  color: white;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #4470ff;
+  color: white;
+  transform: rotateY(180deg);
+}
+/* flipcard */
+
+/* skip */
+.skip a{
+  background: white;
   left: 0;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0,0,0,0);
+  padding: 6px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+  position: absolute;
+  top: -40px;
+  }
+    
+  .skip a:focus{
+  position:absolute;
+  top:0px;
+  }
+/*skip */
+  
+@media (min-width:600px) {
+  nav{
+    background-color:white;
+    padding: 20px;    
+    text-align: center;
+  }
+
+  nav li{
+    padding: 4px;
+    border: 1px solid black;
+    margin-top: 0px;
+    display:inline-block;
+  }
+
+  img{
+    padding: 40px;
+    border: 1px solid white;
+    display: block;
+    margin: 0 auto; 
+    width: 500px;
+  }
+
+  footer{
+    margin-top: 50px;
+    }
 }
 
-@media screen and (min-width: 500px) {
+@media (min-width:1025px){
+  .grid-container {
+    display: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    background-color: #89A1EF;
+    padding: 10px;
+    border-bottom: 20px solid white;
+  }
+
+  nav{
+    background-color:white;
+    padding: 20px;    
+    text-align: center;
+    width:60%;
+    margin: 0 auto;
+  }
+
+  nav li{
+    padding: 10px;
+    border: 1px solid black;
+    margin-top: 0px;
+    display:inline-block;
+  }
+  
+  h1{
+    width:50%;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+
   header{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-  .img{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    margin-top:350px;
   }
 }
-
-/* make the current page have an undeline below the navbar */
-nav a[href="<?php echo basename($_SERVER['PHP_SELF']); ?>"]{
-  border-bottom: 2px solid white;
-}
-
-
-
-
-
-
-

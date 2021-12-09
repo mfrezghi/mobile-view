@@ -8,35 +8,47 @@
 	<link rel="stylesheet" href="css/style.css">
 	<title>About Me</title>
 </head>
+
 <body>
-	<!-- You do not need to make any changes to this file, but
-	you should still review the tags to make sure that you
-	are familiar with them. -->
+	<div class="skip"><a href="#main">Skip to Main Content</a></div>
 	<header>
 		<nav>
-			<ul>
-				<li><a href = "index.html">About Me</a></li>
+			<ul class="nav">
+				<li class="current"><a href = "index.html">About Me</a></li>
 				<li><a href = "travel.html">Travel</a></li>
 				<li><a href = "friends.html">Friends</a></li>
 				<li><a href = "activities.html">Activities</a></li>
+				<li><a href = "contact.html">Contact</a></li>
 			</ul>
 		</nav>
-
-		<h1>Medhanie Frezghi</h1>
-
 	</header>
 
 	<main>
-
-		<p>I am a student at the University of Michigan. I am studying user experience design and data science.</p>
-
-		<p>This is a website about my favorite things</p>
-    <img src="imgs/june.png" alt = "June" width="500">
-
+		<h2 id="main">I am a student at the University of Michigan. I am studying information analysis in the School of Information,</h2>
+		<h2>and this is a website about my favorite things</h2>
+			<div class="grid-container">
+				<div class="flip-card">
+					<div class="flip-card-inner">
+						<a href="#" id="flip-card-inner"></a>
+						<div class="flip-card-front">	
+							<img src="imgs/june.png" alt = "June" width="500">
+						</div>
+				
+						<div class="flip-card-back">
+							<h1>June Frezghi</h1>
+							<br>
+							<h2>Pandemic Puppy</h2>
+							
+						</div>		
+					</div>
+				</div>
+			</div>
 	</main>
 
 	<footer>
 		<p>Med Frezghi 2021</p>
 	</footer>
+
 </body>
+
 </html>
