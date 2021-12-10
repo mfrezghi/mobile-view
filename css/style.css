@@ -26,7 +26,8 @@ font-size: 32px;
 line-height: 1.5;
 text-align: center;
 display: block;
-background-color: #89A1EF;
+background-color: white;
+color: black;
 }
 
 p{
@@ -160,12 +161,7 @@ label{
   to {opacity:1;}
 }
 
-@media screen and (prefers-reduced-motion: reduce) {
-  img {
-    -webkit-animation: initial;
-    animation: initial;
-  }
-}
+
 
 /* flipcard */
 .flip-card {
@@ -296,4 +292,30 @@ label{
   header{
     margin-top:350px;
   }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  img {
+    -webkit-animation: initial;
+    animation: initial;
+  }
+  body{
+    background-attachment: scroll; 
+    background-position: center; 
+    background-size: cover; 
+    color: white;
+    background-image: url("../imgs/champs.jpg");
+    background-color: #89A1EF;
+    background-blend-mode: luminosity;
+    background-repeat: no-repeat;
+    grid-column: 1 / -1;
+    grid-row: 1 / span 1;
+  }
+  .flip-card:hover .flip-card-inner,
+  .flip-card:focus-within .flip-card-inner,
+  .flip-card:active .flip-card-inner,
+  .flip-card:focus .flip-card-inner {
+    transform: none;
+  }
+
 }
